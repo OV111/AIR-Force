@@ -12,7 +12,6 @@ export const PartnerMarquee = () => {
             <div className="logo-marquee">
                 {console.log(logos)}
                 {[...logos,...logos].map((logo,index) => {
-                    
                     return (
                         <img src={`/src/assets/logos/${logo.name}`}  alt={logo.name.split('.')[0]} key={index} width={logo.width} height={60}/>
                     )
