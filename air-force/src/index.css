@@ -15,6 +15,7 @@ body {
     margin: 0;
     padding: 0;
 }
+/* Title Section */
 .site-header {
     display: flex;
     justify-content: center;
@@ -53,6 +54,7 @@ body {
     color: #646cff;
     transition: 0.5s;
 }
+/* Header Section */
 .header-section {
     display: flex;
     flex-direction: column;
@@ -122,12 +124,14 @@ body {
     font-family: 'Bebas Neue', sans-serif;
     /* color: #1e3b8af3; */
     /* color: #2563EB; */
-    color: #1E3A8A;
+    /* color: #1E3A8A; */
     /* color: #004F9F; */
+    color: #3b4cf0;
 }
 .label {
     align-items: center;
     font-size: 28px;
+    font-weight: 600;
     font-family: 'Inter', sans-serif;
     color: #ffffff;
     letter-spacing: 2px;
@@ -197,12 +201,137 @@ body {
   left: 100%;
 }
 
+/* Partner Section */
+.partner-section {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+}
+.partner-section h2 {
+    font-size: 22px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 2px;
+    margin-bottom: 2px;
+    /* color: #3b4cf0; */
+    color: whitesmoke;
+}
+.marquee-container {
+    overflow: hidden;
+    width: 100%;
+    padding: 20px 0;
+}
+.logo-marquee {
+    display: flex;
+    gap: 8px;
+    width: max-content;
+    animation: scroll-marquee 35.5s linear infinite;
+}
+.marquee-logo {
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+
+/* Aircraft Section */
+.AirCraftShowCase {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+.h1_of_Aircraft {
+    font-size: 40px;
+    font-family: 'Bebas Neue', sans-serif;
+    color: white;
+    letter-spacing: 1px;
+    margin:0px 0px 20px;
+    /* font-family: Impact, "Arial Black", sans-serif; */
+}
+.aircraftCards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    /* max-width: 2000px; */
+    gap: 6px;
+    margin-top: 0px;
+    margin-bottom: 800px;
+}
+.aircraftCard {
+    position: relative;
+    border-radius: 8px;
+    width: 447px;
+    height: 360px;
+    /* background: wheat; */
+    overflow: hidden;
+    margin: 6px;
+}
+.card-background-video {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    z-index: 0;
+    filter: brightness(0.92); 
+}
+.card-content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    /* text-shadow: 1px 1px 3px rgba(0,0,0,0.8); */
+}
+
+.card-content h2 {
+    font-size: 38px;
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    /* font-family: 'Bebas Neue', sans-serif; */
+    color: #3b4cf0;
+    letter-spacing: 1px;
+    margin-top: 0;
+    margin-bottom: 0px;
+    padding: 20px;
+    border-radius: 4px;
+}
 
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes scroll-marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
 
 
 
