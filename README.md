@@ -1,4 +1,4 @@
-# AIR FORCE   <img src="https://img.icons8.com/fluency/48/us-air-force.png" alt="Air Force Icon" width="20" style="vertical-align: middle; filter: invert(16%) sepia(89%) saturate(6054%) hue-rotate(358deg) brightness(95%) contrast(112%);" /> 
+# AIR FORCE   <img src="https://img.icons8.com/fluency/48/us-air-force.png" alt="Air Force Icon" width="40" height="40" style="vertical-align: middle; filter: invert(16%) sepia(89%) saturate(6054%) hue-rotate(358deg) brightness(95%) contrast(112%);" /> 
 
 A high-impact, visually striking web experience that showcases the might and legacy of the Air Force. Built with modern web technologies to educate, inspire, and honor the best of the skies.
 
