@@ -2,10 +2,24 @@
 
 
 Welcome to AirForce, an educational web platform dedicated to showcasing the legendary aircraft and cutting-edge technologies that shaped modern airpower.
+Whether you're an aviation enthusiast, student, or tech lover — this site gives you structured, insightful content about the most essential aircraft in Air Force history and the technology that powers them.
 A high-impact, visually striking web experience that showcases the might and legacy of the Air Force. Built with modern web technologies to educate, inspire, and honor the best of the skies.
 
+## ✍️ Sections Overview
 
+### 🛩️ 1. Legend Aircrafts
 
+The foundation of aerial supremacy. These aircraft changed the course of aviation history.
+
+ -  Each entry includes:
+
+ - History – Origin, missions, and significance.
+
+ - Tech – Engines, avionics, weapons, and performance specs.
+
+ - Aircraft – Visual models, design breakdowns, and role in combat.
+
+ - About – Trivia, lesser-known facts, pilot stories, and restoration efforts.
 
 
 
