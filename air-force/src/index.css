@@ -1,8 +1,8 @@
 :root {
     font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
     color-scheme: light dark;
-    background-color: #1e1e4e;
-    /* background-color: #0A0A23; */
+    /* background-color: #7A8BA3; */
+    background-color: #0A0A23;
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -44,16 +44,35 @@ body {
     align-items: center;
     gap: 30px;
 }
-.header-right a {
+ .header-right a {
     letter-spacing: 1.5px;
     text-decoration: none;
     font-size: 22px;
     color: #ffffff;
+    position: relative;
+    transition: color 0.4s ease;
+}
+.header-right a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #646cff;
+    transition: width 0.4s ease;
 }
 .header-right a:hover {
     color: #646cff;
-    transition: 0.5s;
 }
+.header-right a:hover::after {
+    width: 100%;
+}
+.header-right a:focus {
+    outline: 2px solid #646cff;
+    outline-offset: 2px;
+}
+
 /* Header Section */
 .header-section {
     display: flex;
@@ -289,6 +308,7 @@ body {
     padding: 0px;
     margin: 0px;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    
 }
 .card-content-h2 {
     font-size: 34px;
@@ -298,24 +318,52 @@ body {
     padding: 0px;
     letter-spacing: 1px;
     margin-top: 0px;
-    margin-bottom: 100px;
+    margin-bottom: 120px;
 }
-.card-content-parts {
+
+.card-content-part1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    font-size: 20px;
+    /* margin-bottom: 15px; */
+    width: 400px;
+    gap: 20px;
+}
+.card-content-part2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    margin-bottom: 20px;    
+    gap: 20px;
+}
+.card-content-part1 h1 {
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    background-color: #1c1c71;
+    color: #eaeaea;
+    margin: 0px;
+    padding: 8px;
+    text-align: center;
+    white-space: nowrap;
+    flex: 0 0 150px;
+    border-radius: 8px;
+}
+.card-content-part2 h1 {
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
     font-family: 'Inter', sans-serif;
     color: #eaeaea;
-    /* margin-top: 10px; */
-    margin-bottom: 20px;
-    padding: 0px;
     text-align: center;
-    border: 1px solid #3b4cf0;
+    background-color: #1c1c71;
+    padding: 8px;
+    white-space: nowrap;
+    flex: 0 0 150px;
+    border-radius: 8px;
 }
-
-
 
 
 
