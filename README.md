@@ -10,6 +10,7 @@ A high-impact, visually striking web experience that showcases the might and leg
 ### 🛩️ 1. Legend Aircrafts
 
 The foundation of aerial supremacy. These aircraft changed the course of aviation history.
+This section is a tribute and deep-dive into the most important aircraft ever built — not just because they were powerful, but because they changed how air forces think, fight, and fly.
 
  -  Each entry includes:
 
@@ -20,6 +21,50 @@ The foundation of aerial supremacy. These aircraft changed the course of aviatio
  - Aircraft – Visual models, design breakdowns, and role in combat.
 
  - About – Trivia, lesser-known facts, pilot stories, and restoration efforts.
+
+### ⚙️ 2. Modern Technologies
+This section explores the core technologies that define modern air superiority — from stealth to software, engines to electronic warfare. Each topic is explained with real-world examples, technical breakdowns, and interactive models where possible.
+
+
+
+<!-- 
+🔍 Featured Topics:
+Stealth Technology (LO / VLO)
+Learn how radar-absorbent materials, angled surfaces, and heat suppression make aircraft like the F-22 Raptor and B-2 Spirit nearly invisible to enemy detection.
+
+Fly-by-Wire & Flight Control Systems
+From mechanical cables to digital computers — understand how modern jets achieve unmatched agility, stability, and safety.
+
+Thrust Vectoring & Supermaneuverability
+How aircraft like the Su-35 and F-22 bend the laws of physics with engines that control direction as well as thrust.
+
+Radar Systems & Beyond Line-of-Sight Detection
+Explore AESA radar, IRST systems, and passive sensors that give pilots total battlefield awareness.
+
+Electronic Warfare (EW) & ECM
+See how aircraft disrupt enemy radar, jam missiles, and remain undetected through cutting-edge electronic countermeasures.
+
+Hypersonic Flight & Future Propulsion
+Discover how scramjets, ramjets, and boost-glide vehicles are pushing speeds past Mach 5 — shaping the next era of air combat.
+
+Artificial Intelligence & Autonomy
+From AI-assisted targeting to loyal wingman drones, see how intelligent systems are transforming the cockpit and the battlefield.
+
+Data Links & Network-Centric Warfare
+Examine how real-time data sharing via Link 16, MADL, and secure satellite comms turns squadrons into one unified system. -->
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
