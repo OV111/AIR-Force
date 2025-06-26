@@ -20,10 +20,20 @@ export const AirCraftCards = () => {
                                     <h2>{aircraft.name}</h2>
                                 </div>
 
-                                <div className="card-content-parts">Speed - {`${aircraft.speed}`}</div>
-                                <div className="card-content-parts">Range - {`${aircraft.range}`}</div>
-                                <div className="card-content-parts">Role - {`${aircraft.role}`}</div>
-                                <div className="card-content-parts">Note - {`${aircraft.note}`}</div>
+                                <div className="card-content-part1">
+                                     <h1>Speed - {`${aircraft.speed}`}</h1>
+                                     <h1>Range - {`${aircraft.range}`}</h1>    
+                                </div>
+                                
+
+                                <div className="card-content-part2">
+                                    <h1>Role - {`${aircraft.role}`}</h1>
+                                    <h1>Note - {`${aircraft.note}`}</h1>
+                                </div>
+
+                               
+                                
+                               
                             </div>
                         </div>
                     )
@@ -36,8 +46,15 @@ export const AirCraftCards = () => {
 export const AirCraftShowCases = () => {
     return (
         <section className="AirCraftShowCase">
-            <div className="h1_of_Aircraft">
+            <div className="text_of_Aircraft">
                 <h1>The Best of the Best</h1>
+                <p>These are not just machines — they are legends in flight.
+                   The aircraft in this section represent the pinnacle of aviation
+                   engineering, combat performance, and historical impact. 
+                   Chosen for their unmatched speed, agility, durability, 
+                   and mission success, each has earned its place among the elite.
+                   They have redefined what air dominance means.
+                </p>
             </div>
 
             <div>
