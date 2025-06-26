@@ -55,11 +55,15 @@ Examine how real-time data sharing via Link 16, MADL, and secure satellite comms
 
 
 
+### 📚 3. Air Forces Worldwide
+
+How nations build and project airpower.
+This section explores how different countries design, train, and operate their air forces — shaped by geography, politics, threats, and technology.
 
 
-
-
-
+ - 🟦 1. Global Role & Missions
+ - 🟦 2. Aircraft Inventory
+ - 🟦 3. Technology & Industry
 
 
 
