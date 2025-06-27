@@ -4,7 +4,16 @@ import { useRef, useState} from "react"
 const Aircrafts = [
     {id:1, name: "F-22 Raptor", video: "src/assets/F-22-Raptor.mp4", speed: "2414km/h", range: "3000km", role: "Air Fighter", note: "U.S. only"},
     {id:2, name: "B-2 Spirit", video: "src/assets/B-2-Spirit.mp4", speed: "1010km/h", range: "11000km", role: "Stealth Bomber", note: "Invisible to radar"},
-    {id:3, name: "SR-71 Blackbird", video: "src/assets/F-22-Raptor.mp4", speed: "3510km/h", range: "5400km", role: "Strategic Recon",note: "Never Hit"},
+    {
+        id:3,
+        name: "J-20 Dragon",
+        video: "src/assets/J-20-Dragon.mp4",
+        speed: "2470km/h",
+        range: "5500km",
+        role: "Air Fighter",
+        note: "Long-Range",
+    },
+    
     {id:4, name: "F-35 Lightning II", video: "src/assets/F-22-Raptor.mp4", speed: "3510km/h", range: "5400km", role: "Strategic Recon",note: "Never Hit"},
     {
         id: 5,
@@ -42,15 +51,7 @@ const Aircrafts = [
         role: "",
         note: "",
     },
-    {
-        id:9,
-        name: "J-20 Dragon",
-        video: "src/assets/F-22-Raptor.mp4",
-        speed: "",
-        range: "",
-        role: "",
-        note: "",
-    },
+    {id:9, name: "SR-71 Blackbird", video: "src/assets/F-22-Raptor.mp4", speed: "3510km/h", range: "5400km", role: "Strategic Recon",note: "Never Hit"},
 ]
 const ChevronRight = () => {
     return (
