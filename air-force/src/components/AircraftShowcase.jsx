@@ -1,14 +1,83 @@
-export const AirCraftCards = () => {
-    const Aircrafts = [
-        {id:1, name: "F-22 Raptor", video: "src/assets/F-22-Raptor.mp4", speed: "2414km/h", range: "3000km", role: "Air Fighter", note: "U.S. only"},
-        {id:2, name: "B-2 Spirit", video: "src/assets/B-2-Spirit.mp4", speed: "1010km/h", range: "11000km", role: "Stealth Bomber", note: "Invisible to radar"},
-        {id:3, name: "SR-71 Blackbird", video: "src/assets/F-22-Raptor.mp4", speed: "3510km/h", range: "5400km", role: "Strategic Recon",note: "Never Hit"},
-        
-        
-        // {id:4, name: "F-35 Lightning II", video: "src/asC:\Users\Default\Documents\GitHub\AIR-Force\air-force\src\assets\Untitled-video-Made-with-Clipchamp.mp4sets/B-2-Spirit.mp4", info: ""},
-    ]
+import { useRef, useState} from "react"
+// import { useEffect } from "react"
+// import "/src/index.css"
+const Aircrafts = [
+    {id:1, name: "F-22 Raptor", video: "src/assets/F-22-Raptor.mp4", speed: "2414km/h", range: "3000km", role: "Air Fighter", note: "U.S. only"},
+    {id:2, name: "B-2 Spirit", video: "src/assets/B-2-Spirit.mp4", speed: "1010km/h", range: "11000km", role: "Stealth Bomber", note: "Invisible to radar"},
+    {id:3, name: "SR-71 Blackbird", video: "src/assets/F-22-Raptor.mp4", speed: "3510km/h", range: "5400km", role: "Strategic Recon",note: "Never Hit"},
+    {id:4, name: "F-35 Lightning II", video: "src/assets/F-22-Raptor.mp4", speed: "3510km/h", range: "5400km", role: "Strategic Recon",note: "Never Hit"},
+    {
+        id: 5,
+        name: "A-10 Thunderbolt",
+        video: "",
+        speed: "",
+        range: "",
+        role: "",
+        note: "",
+    },
+    {
+        id: 6,
+        name: "F-16 Falcon",
+        video: "",
+        speed: "",
+        range: "",
+        role: "",
+        note: "",
+    },
+    {
+        id: 7,
+        name: "SU-57 Felon",
+        video: "",
+        speed: "",
+        range: "",
+        role: "",
+        note: "",
+    },
+    {
+        id:8,
+        name: "Eurofighter",
+        video: "",
+        speed: "",
+        range: "",
+        role: "",
+        note: "",
+    },
+    {
+        id:9,
+        name: "J-20 Dragon",
+        video: "",
+        speed: "",
+        range: "",
+        role: "",
+        note: "",
+    },
+]
+const ChevronRight = () => {
     return (
-         <div className="aircraftCards">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <polyline points="9,18 15,12 9,6"></polyline>
+        </svg>
+    )
+}
+const ChevronLeft = () => {
+    return (
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <polyline points="15,18 9,12 15,6"></polyline>
+        </svg>
+    )
+}
+const AirCraftCard = ({scrollContainerRef,canScrollLeft,canScrollRight,scrollLeft,scrollRight,checkScrollButtons}) => {
+
+    return (
+        <div className="cards-container">
+            <button className={`nav-button nav-button-left ${!canScrollLeft ? "disabled": ""}`} onClick={scrollLeft} disabled={!canScrollLeft} type="button"> 
+                <ChevronLeft />
+            </button>
+            <button className={`nav-button nav-button-right ${!canScrollRight ? "disabled" : ""}`} onClick={scrollRight} disabled={!canScrollRight} type="button"> 
+                <ChevronRight />
+            </button>
+
+            <div ref={scrollContainerRef} className="aircraftCards" onScroll={checkScrollButtons}>
                 {Aircrafts.map((aircraft) => {
                     return (
                         <div className="aircraftCard" key={aircraft.id}>
@@ -19,31 +88,53 @@ export const AirCraftCards = () => {
                                 <div className="card-content-h2">
                                     <h2>{aircraft.name}</h2>
                                 </div>
-
                                 <div className="card-content-part1">
                                      <h1>Speed - {`${aircraft.speed}`}</h1>
                                      <h1>Range - {`${aircraft.range}`}</h1>    
                                 </div>
-                                
-
                                 <div className="card-content-part2">
                                     <h1>Role - {`${aircraft.role}`}</h1>
                                     <h1>Note - {`${aircraft.note}`}</h1>
                                 </div>
-
-                               
-                                
-                               
                             </div>
                         </div>
                     )
                 })}
+            </div>
         </div>
     )
 
 }
-
 export const AirCraftShowCases = () => {
+     const scrollContainerRef = useRef(null)
+    const [canScrollLeft, setCanScrollLeft] = useState(false)
+    const [canScrollRight,setCanScrollRight] = useState(true)
+
+    const checkScrollButtons = () => {
+        if(scrollContainerRef.current) {
+            const {scrollLeft, scrollWidth, clientWidth} = scrollContainerRef.current
+            setCanScrollLeft(scrollLeft > 0)
+            setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 1)
+        }
+    }
+
+    const scrollLeft = () => {
+        if(scrollContainerRef.current) {
+            scrollContainerRef.current.scrollBy({
+                left: -370,
+                behavior: "smooth",
+            })
+        }
+    }
+    const scrollRight = () => {
+        if(scrollContainerRef.current) {
+            scrollContainerRef.current.scrollBy({
+                left: 370,
+                behavior: "smooth",
+            })
+        }
+    }
+
     return (
         <section className="AirCraftShowCase">
             <div className="text_of_Aircraft">
@@ -57,9 +148,14 @@ export const AirCraftShowCases = () => {
                 </p>
             </div>
 
-            <div>
-                <AirCraftCards />
-            </div>
+            <AirCraftCard 
+                scrollContainerRef = {scrollContainerRef}
+                canScrollLeft = {canScrollLeft}
+                canScrollRight = {canScrollRight}
+                scrollLeft = {scrollLeft}
+                scrollRight={scrollRight}
+                checkScrollButtons={checkScrollButtons}
+            />
         </section>
     )
 }
