@@ -1,8 +1,9 @@
 import './index.css'
 import {Title} from "./components/Title" 
 import {Header} from "./components/Header"
-import {AirCraftShowCases} from "./components/AircraftShowcase"
 import {PartnerMarquee} from "./components/Partners"
+import {AirCraftShowCases} from "./components/AircraftShowcase"
+import { Footer } from './components/Footer'
 function App() {
   return (
     <div>
@@ -10,7 +11,7 @@ function App() {
       <Header></Header>
       <PartnerMarquee></PartnerMarquee>
       <AirCraftShowCases></AirCraftShowCases>
-
+      <Footer></Footer>
     </div>
   )
 }
