@@ -131,4 +131,4 @@ Images, videos, and symbols used belong to their respective copyright holders. A
 
 
 ## Pictures of the Air Force Website
-![Air Force Website](src\assets\images\Screenshot 2025-06-27 200619.png)
+![Air Force Website](src/assets/images/Screenshot 2025-06-27 200619.png)
