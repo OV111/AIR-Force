@@ -128,3 +128,7 @@ This website is a fan-made, educational, and creative project dedicated to showc
 It is **not affiliated with**, **endorsed by**, or **representing** any official military organization, government body, or defense contractor.
 
 Images, videos, and symbols used belong to their respective copyright holders. All rights belong to their original sources.
+
+
+## Pictures of the Air Force Website
+![Air Force Website](src\assets\images\Screenshot 2025-06-27 200619.png)
