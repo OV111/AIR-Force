@@ -533,10 +533,6 @@ body {
   flex-wrap: wrap;
   gap: 32px;
 }
-
-
-
-
 .footer-contact h3 {
   font-size: 22px;
   font-weight: 700;
@@ -545,18 +541,10 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-
 .footer-contact p {
   color: rgba(255, 255, 255, 0.9);
   font-size: 15px;
-  
-  /* margin: 8px 0; */
-  /* display: flex; */
-  /* align-items:    center; */
-  /* justify-content: flex-end; */
-  /* gap: 8px; */
 }
-
 .footer-bottom {
   display: flex;
   justify-content: space-between;
@@ -565,19 +553,16 @@ body {
   flex-wrap: wrap;
   gap: 20px;
 }
-
 .footer-bottom p {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.8);
   margin: 0 ;
   font-weight: 500;
 }
-
 .legal-nav {
   display: flex;
   gap: 24px;
 }
-
 .legal-nav a {
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
@@ -587,28 +572,9 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
-
 .legal-nav a:hover {
   color: white;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @keyframes scroll-marquee {
     0% {
         transform: translateX(0);
