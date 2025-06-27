@@ -9,7 +9,7 @@ const Aircrafts = [
     {
         id: 5,
         name: "A-10 Thunderbolt",
-        video: "",
+        video: "src/assets/F-22-Raptor.mp4",
         speed: "",
         range: "",
         role: "",
@@ -18,7 +18,7 @@ const Aircrafts = [
     {
         id: 6,
         name: "F-16 Falcon",
-        video: "",
+        video: "src/assets/F-22-Raptor.mp4",
         speed: "",
         range: "",
         role: "",
@@ -27,7 +27,7 @@ const Aircrafts = [
     {
         id: 7,
         name: "SU-57 Felon",
-        video: "",
+        video: "src/assets/F-22-Raptor.mp4",
         speed: "",
         range: "",
         role: "",
@@ -36,7 +36,7 @@ const Aircrafts = [
     {
         id:8,
         name: "Eurofighter",
-        video: "",
+        video: "src/assets/F-22-Raptor.mp4",
         speed: "",
         range: "",
         role: "",
@@ -45,7 +45,7 @@ const Aircrafts = [
     {
         id:9,
         name: "J-20 Dragon",
-        video: "",
+        video: "src/assets/F-22-Raptor.mp4",
         speed: "",
         range: "",
         role: "",
@@ -103,7 +103,6 @@ const AirCraftCard = ({scrollContainerRef,canScrollLeft,canScrollRight,scrollLef
             </div>
         </div>
     )
-
 }
 export const AirCraftShowCases = () => {
      const scrollContainerRef = useRef(null)

@@ -1,11 +1,11 @@
 const logos = [ 
     // {name: "BlueOrigin.png",width: 160},
-    {name: "Boeing.png",width: 150},
-    {name: "Aws.png",width:130},
-    {name: "SpaceX.png",width:140},
-    {name: "Darpa.png",width: 150},
-    {name: "Nasa.png",width: 120},
-    {name: "Raytheon.png",width:150},
+    {name: "Boeing.png",width: 120},
+    {name: "Aws.png",width:110},
+    {name: "SpaceX.png",width:120},
+    {name: "Darpa.png",width: 120},
+    {name: "Nasa.png",width: 110},
+    {name: "Raytheon.png",width:130},
 ]
 export const PartnerMarquee = () => {
     return (
@@ -19,7 +19,7 @@ export const PartnerMarquee = () => {
                         alt={logo.name.split('.')[0]} 
                         key={index}
                         width={logo.width}
-                        height={60}
+                        height={50}
                         className="marquee-logo"/>
                     )
                 })}
