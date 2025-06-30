@@ -10,7 +10,7 @@ export const Title = () => {
                 <a href="/">Tech</a>
                 <a href="/">History</a>
                 <a href="/">About</a>
-                <a href=""><img src="src/assets/mode-dark-svgrepo-com.svg" alt="" width={40} height={40}/></a>
+                <a href=""><img src="src/assets/images/mode-dark-svgrepo-com.svg" alt="" width={40} height={40}/></a>
             </div>
         </header>
     )

@@ -4,7 +4,7 @@ export const Header = () => {
         <header className="header-section">
             <video className="background-video"  autoPlay muted  playsInline> /**loop */
                 {/* <source src="src\assets\Header-2-fighter-jets - Made with Clipchamp.mp4" type="video/mp4"/> */}
-                <source src="src\assets\Header-2-fight-jets.mp4"/>
+                <source src="src\assets\videos/Header-2-fight-jets.mp4"/>
             </video>
             <div className="header-content">
                 <h1>WELCOME TO AIR FORCE</h1>
