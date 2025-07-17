@@ -1,5 +1,8 @@
-// import
+import BlurText from "./BlurText"
 export const Header = () => {
+    const handleAnimationComplete = () => {
+        console.log("Animation completed")
+    }
     return (
         <header className="header-section">
             <video className="background-video"  autoPlay muted  playsInline> /**loop */
@@ -7,7 +10,15 @@ export const Header = () => {
                 <source src="src\assets\videos/Header-2-fight-jets.mp4"/>
             </video>
             <div className="header-content">
-                <h1>WELCOME TO AIR FORCE</h1>
+            <BlurText
+                text="WELCOME TO AIR FORCE"
+                delay={200}
+                animateBy="words"
+                direction="top"
+                onAnimationComplete={handleAnimationComplete}
+                className="text-2xl mb-8"
+            />
+                
                 <p>Commanding the skies and beyond with next-generation aircraft cutting-edge
                    systems and Elite pilots.With unmatched precision and rolentless innovation,
                     the world's most advanced Air-Force turns air superiority into reality - not just strategy!</p>
