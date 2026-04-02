@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 50">
+  <rect width="160" height="50" fill="none"/>
+  <!-- Russian-style red diamond -->
+  <polygon points="18,8 26,25 18,42 10,25" fill="#cc0000"/>
+  <polygon points="18,13 23,25 18,37 13,25" fill="#0a0a23"/>
+  <!-- Text -->
+  <text x="36" y="22" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" letter-spacing="1.5">SUKHOI</text>
+  <text x="36" y="38" font-family="Arial, sans-serif" font-size="9" font-weight="400" fill="rgba(255,255,255,0.6)" letter-spacing="1">AVIATION</text>
+</svg>

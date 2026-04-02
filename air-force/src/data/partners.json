@@ -1,0 +1,14 @@
+[
+  { "id": "boeing",         "src": "/logos/Boeing.png",           "alt": "Boeing",          "width": 120 },
+  { "id": "lockheed",       "src": "/logos/LockheedMartin.svg",   "alt": "Lockheed Martin", "width": 150 },
+  { "id": "northrop",       "src": "/logos/NorthropGrumman.svg",  "alt": "Northrop Grumman","width": 155 },
+  { "id": "raytheon",       "src": "/logos/Raytheon.png",         "alt": "Raytheon",        "width": 130 },
+  { "id": "bae",            "src": "/logos/BAESystems.svg",       "alt": "BAE Systems",     "width": 130 },
+  { "id": "airbus",         "src": "/logos/Airbus.svg",           "alt": "Airbus",          "width": 120 },
+  { "id": "sukhoi",         "src": "/logos/Sukhoi.svg",           "alt": "Sukhoi",          "width": 120 },
+  { "id": "darpa",          "src": "/logos/Darpa.png",            "alt": "DARPA",           "width": 120 },
+  { "id": "nasa",           "src": "/logos/Nasa.png",             "alt": "NASA",            "width": 110 },
+  { "id": "spacex",         "src": "/logos/SpaceX.png",           "alt": "SpaceX",          "width": 120 },
+  { "id": "aws",            "src": "/logos/Aws.png",              "alt": "AWS",             "width": 110 },
+  { "id": "blueorigin",     "src": "/logos/BlueOrigin.png",       "alt": "Blue Origin",     "width": 130 }
+]

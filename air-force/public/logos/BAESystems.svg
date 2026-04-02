@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50">
+  <rect width="200" height="50" fill="none"/>
+  <!-- BAE red accent -->
+  <rect x="0" y="10" width="38" height="30" rx="2" fill="#cc0000"/>
+  <text x="4" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="900" fill="#ffffff" letter-spacing="1">BAE</text>
+  <!-- SYSTEMS text -->
+  <text x="50" y="26" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff" letter-spacing="2">SYSTEMS</text>
+</svg>

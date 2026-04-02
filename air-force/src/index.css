@@ -7,9 +7,45 @@
     text-rendering: optimizeLegibility;
     /* -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; */
+
+    --primary-color: #3b4cf0;
+    --primary-light: #5b6cf2;
+    --primary-gradient: linear-gradient(135deg, #3b4cf0 0%, #5b6cf2 50%, #3b4cf0 100%);
 }
 html {
     scroll-behavior: smooth;
+}
+.page-placeholder {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    color: #ffffff;
+    text-align: center;
+}
+.page-placeholder h1 {
+    font-size: 64px;
+    font-family: Impact, "Arial Black", sans-serif;
+    letter-spacing: 4px;
+    margin: 0;
+    color: var(--primary-light);
+}
+.page-placeholder p {
+    font-size: 18px;
+    color: rgba(255,255,255,0.5);
+    margin: 0;
+}
+.page-placeholder a {
+    margin-top: 8px;
+    color: var(--primary-light);
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+.page-placeholder a:hover {
+    text-decoration: underline;
 }
 body {
     margin: 0;
@@ -19,59 +55,103 @@ body {
 /* Title Section */
 .site-header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 90px;
-    gap: 700px;
+    height: 76px;
+    padding: 0 48px;
+    box-sizing: border-box;
+    background: transparent;
+    border-bottom: none;
+    z-index: 1000;
+    transition: background 0.4s ease;
 }
 .header-left {
     display: flex;
-    justify-content: start;
     align-items: center;
-    font-family: Impact, "Arial Black", sans-serif;
-    gap: 20px;
+    gap: 14px;
+    text-decoration: none;
+}
+.header-left img {
+    filter: drop-shadow(0 0 8px rgba(91, 108, 242, 0.5));
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+.header-left img:hover {
+    filter: drop-shadow(0 0 14px rgba(91, 108, 242, 0.9));
+    transform: rotate(-6deg) scale(1.05);
 }
 .header-left h1 {
     margin: 0;
-    letter-spacing: 2px;
-    font-size: 30px;
+    letter-spacing: 4px;
+    font-size: 20px;
+    font-family: Impact, "Arial Black", sans-serif;
+    font-weight: 400;
     color: #ffffff;
+    text-shadow: 0 0 20px rgba(91, 108, 242, 0.4);
 }
 .header-right {
     display: flex;
-    justify-content: end;
     align-items: center;
-    gap: 30px;
+    gap: 6px;
 }
- .header-right a {
+.header-right a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
     letter-spacing: 1.5px;
     text-decoration: none;
-    font-size: 22px;
-    color: #ffffff;
-    position: relative;
-    transition: color 0.4s ease;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.75);
+    border-radius: 6px;
+    transition: color 0.25s ease, background 0.25s ease;
 }
 .header-right a::after {
     content: '';
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 0;
     height: 2px;
-    background-color: #646cff;
-    transition: width 0.4s ease;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #3b4cf0, #5b6cf2);
+    transition: width 0.3s ease;
 }
 .header-right a:hover {
-    color: #646cff;
+    color: #ffffff;
+    background: transparent;
 }
 .header-right a:hover::after {
-    width: 100%;
+    width: calc(100% - 32px);
 }
-.header-right a:focus {
-    outline: 2px solid #646cff;
+.header-right a:focus-visible {
+    outline: 2px solid #5b6cf2;
     outline-offset: 2px;
+}
+.header-dark-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    padding: 7px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+.header-dark-toggle:hover {
+    background: rgba(91, 108, 242, 0.2) !important;
+    border-color: rgba(91, 108, 242, 0.5) !important;
+    transform: rotate(20deg);
+}
+.header-dark-toggle::after {
+    display: none !important;
 }
 
 /* Header Section */
@@ -142,11 +222,7 @@ body {
     font-size: 40px;
     font-weight: 800;
     font-family: 'Bebas Neue', sans-serif;
-    /* color: #1e3b8af3; */
-    /* color: #2563EB; */
-    /* color: #1E3A8A; */
-    /* color: #004F9F; */
-    color: #3b4cf0;
+    color: var(--primary-color);
 }
 .label {
     align-items: center;
@@ -178,7 +254,7 @@ body {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, #3b4cf0 0%, #5b6cf2 50%, #3b4cf0 100%);
+    background: var(--primary-gradient);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     letter-spacing: 0.5px;   
 }
@@ -240,16 +316,6 @@ body {
     overflow: hidden;
     width: 100%;
     padding: 30px 0;
-}
-.logo-marquee {
-    display: flex;
-    gap: 8px;
-    width: max-content;
-    animation: scroll-marquee 35.5s linear infinite;
-}
-.marquee-logo {
-    flex-shrink: 0;
-    object-fit: contain;
 }
 /* Aircraft Section */
 .cards-container {
@@ -377,7 +443,7 @@ body {
     font-size: 34px;
     font-family: 'Bebas Neue', sans-serif;
     text-align: center;
-    color: #3b4cf0;
+    color: var(--primary-color);
     padding: 0px;
     letter-spacing: 1px;
     margin-top: 0px;
@@ -401,50 +467,32 @@ body {
     gap: 10px;
 }
 
-.card-content-part1 h1 {
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    background: linear-gradient(135deg, #3b4cf0 0%, #5b6cf2 50%, #3b4cf0 100%);
-    color: #eaeaea;
-    margin: 0px;
-    padding: 8px;
-    text-align: center;
-    white-space: nowrap;
-    flex: 0 0 150px;
-    border-radius: 8px;
-    cursor:cell;
-    /* overflow: hidden; */
-}
-
-  /* display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px; */
-
-.card-content-part1 h1:hover {
-    background: #0f172a;
-    border-color: #4f63ff;
-    transform: scale(1.05);
-}
+.card-content-part1 h1,
 .card-content-part2 h1 {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 8px;
-    font-size: 16px;
-    font-weight: 600;
     font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    background: var(--primary-gradient);
     color: #eaeaea;
-    background: linear-gradient(135deg, #3b4cf0 0%, #5b6cf2 50%, #3b4cf0 100%);
-    /* background-color: #1c1c71; */
-    border-radius: 8px;
-    flex: 0 0 150px;
+    margin: 0px;
+    padding: 8px;
     white-space: nowrap;
+    flex: 0 0 150px;
+    border-radius: 8px;
     cursor: cell;
-    /* overflow: hidden; */
 }
+
+.card-content-part1 h1 {
+    font-size: 18px;
+}
+
+.card-content-part2 h1 {
+    font-size: 16px;
+}
+
+.card-content-part1 h1:hover,
 .card-content-part2 h1:hover {
     background: #0f172a;
     border-color: #4f63ff;
@@ -458,11 +506,11 @@ body {
     justify-content: center;
     align-items: center;
     padding:0px;
-    gap: 650px;
+    gap: clamp(100px, 15vw, 650px);
 }
 .footer-h1{
     display: flex;
-    justify-content: st;
+    justify-content: flex-start;
     align-items: center;
     margin: 0 30px;
     gap: 20px;
@@ -475,15 +523,6 @@ body {
     text-align: center;
     margin: 0 30px;
     gap: 20px;
-}
-.airforce-footer {
-  background: linear-gradient(135deg, #4a6fa5 0%, #5a7fb8 50%, #6b8fcc 100%);
-  color: white;
-  padding: 48px 20px 0;
-  max-width: 100%;
-  margin: 200px 20px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
-  /* gap: 20px; */
 }
 .footer-main {
   display: grid;
@@ -574,14 +613,6 @@ body {
 }
 .legal-nav a:hover {
   color: white;
-}
-@keyframes scroll-marquee {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
 }
 
 @media (prefers-color-scheme: light) {

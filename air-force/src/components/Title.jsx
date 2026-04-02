@@ -1,17 +1,19 @@
+import { Link } from 'react-router-dom'
+
 export const Title = () => {
     return (
         <header className="site-header">
-            <div className="header-left">
-                <a href="/"><img src="icons8-us-air-force.svg" alt="logo-air-force" width={70} height={70}/></a>
+            <Link to="/" className="header-left">
+                <img src="icons8-us-air-force.svg" alt="logo-air-force" width={54} height={54}/>
                 <h1>AIR FORCE</h1>
-            </div>
-            <div className="header-right">
-                <a href="/">Aircraft</a>
-                <a href="/">Tech</a>
-                <a href="/">History</a>
-                <a href="/">About</a>
-                <a href=""><img src="src/assets/images/mode-dark-svgrepo-com.svg" alt="" width={40} height={40}/></a>
-            </div>
+            </Link>
+            <nav className="header-right">
+                <Link to="/aircraft">Aircraft</Link>
+                <Link to="/tech">Tech</Link>
+                <Link to="/history">History</Link>
+                <Link to="/about">About</Link>
+                 <Link to="/register">Get Started</Link>
+            </nav>
         </header>
     )
-}   
+}

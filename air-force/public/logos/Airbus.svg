@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50">
+  <rect width="180" height="50" fill="none"/>
+  <!-- Airbus swoosh-style arc -->
+  <path d="M 6 38 Q 18 10 36 24" stroke="#00adef" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <path d="M 10 38 Q 22 14 40 26" stroke="#ffffff" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.4"/>
+  <!-- Text -->
+  <text x="50" y="31" font-family="Arial, sans-serif" font-size="20" font-weight="300" fill="#ffffff" letter-spacing="2">airbus</text>
+</svg>

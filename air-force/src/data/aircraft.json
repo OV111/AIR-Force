@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "F-22 Raptor",
+    "video": "/videos/F-22-Raptor.mp4",
+    "speed": "2414km/h",
+    "range": "3000km",
+    "role": "Air Fighter",
+    "note": "U.S. only"
+  },
+  {
+    "id": 2,
+    "name": "B-2 Spirit",
+    "video": "/videos/B-2-Spirit2.mp4",
+    "speed": "1010km/h",
+    "range": "11000km",
+    "role": "Stealth Bomber",
+    "note": "Invisible to radar"
+  },
+  {
+    "id": 3,
+    "name": "SU-57 Felon",
+    "video": "/videos/SU-57-Felon.mp4",
+    "speed": "2600km/h",
+    "range": "3500km",
+    "role": "Air Superior",
+    "note": "5th Gen"
+  },
+  {
+    "id": 4,
+    "name": "F-35 Lightning II",
+    "video": "/videos/F-35-Lightning-II.mp4",
+    "speed": "1935km/h",
+    "range": "2200km",
+    "role": "Stealth Fighter",
+    "note": "U.S. only"
+  },
+  {
+    "id": 5,
+    "name": "F-15 Eagle",
+    "video": "/videos/F-15-Eagle.mp4",
+    "speed": "3017km/h",
+    "range": "4200km",
+    "role": "Air Fighter",
+    "note": "Proven Record"
+  },
+  {
+    "id": 6,
+    "name": "J-20 Dragon",
+    "video": "",
+    "speed": "2470km/h",
+    "range": "5500km",
+    "role": "Air Fighter",
+    "note": "Long-Range"
+  },
+  {
+    "id": 7,
+    "name": "Eurofighter",
+    "video": "/videos/EuroFighter.mp4",
+    "speed": "2495km/h",
+    "range": "2900km",
+    "role": "Air Strike",
+    "note": "Europe Project"
+  },
+  {
+    "id": 8,
+    "name": "SR-71 Blackbird",
+    "video": "/videos/SR-71-BlackBird.mp4",
+    "speed": "3510km/h",
+    "range": "5400km",
+    "role": "Strategic Recon",
+    "note": "Never Hit"
+  }
+]
