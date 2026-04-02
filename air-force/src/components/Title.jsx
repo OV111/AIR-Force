@@ -7,6 +7,7 @@ export const Title = () => {
                 <img src="icons8-us-air-force.svg" alt="logo-air-force" width={54} height={54}/>
                 <h1>AIR FORCE</h1>
             </Link>
+            
             <nav className="header-right">
                 <Link to="/aircraft">Aircraft</Link>
                 <Link to="/tech">Tech</Link>
