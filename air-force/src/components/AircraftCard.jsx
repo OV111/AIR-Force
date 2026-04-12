@@ -1,50 +1,71 @@
-import { ChevronLeft, ChevronRight } from "./Icons"
+import { useRef, useEffect } from "react"
 import aircrafts from "../data/aircraft.json"
 
-const AircraftCard = ({ scrollContainerRef, canScrollLeft, canScrollRight, scrollLeft, scrollRight, checkScrollButtons }) => {
-    return (
-        <div className="cards-container">
-            <button
-                className={`nav-button nav-button-left ${!canScrollLeft ? "disabled" : ""}`}
-                onClick={scrollLeft}
-                disabled={!canScrollLeft}
-                type="button"
-                aria-label="Scroll left"
-            >
-                <ChevronLeft />
-            </button>
-            <button
-                className={`nav-button nav-button-right ${!canScrollRight ? "disabled" : ""}`}
-                onClick={scrollRight}
-                disabled={!canScrollRight}
-                type="button"
-                aria-label="Scroll right"
-            >
-                <ChevronRight />
-            </button>
+// Only plays when the card enters the viewport — avoids 8 simultaneous streams
+const VideoCard = ({ aircraft }) => {
+    const videoRef = useRef(null)
 
-            <div ref={scrollContainerRef} className="aircraftCards" onScroll={checkScrollButtons}>
-                {aircrafts.map((aircraft) => (
-                    <div className="aircraftCard" key={aircraft.id}>
-                        <video className="card-background-video" autoPlay muted playsInline loop>
-                            {aircraft.video && <source src={aircraft.video} />}
-                        </video>
-                        <div className="card-content">
-                            <div className="card-content-h2">
-                                <h2>{aircraft.name}</h2>
-                            </div>
-                            <div className="card-content-part1">
-                                <h1>Speed - {aircraft.speed}</h1>
-                                <h1>Range - {aircraft.range}</h1>
-                            </div>
-                            <div className="card-content-part2">
-                                <h1>Role - {aircraft.role}</h1>
-                                <h1>Note - {aircraft.note}</h1>
-                            </div>
-                        </div>
-                    </div>
-                ))}
+    useEffect(() => {
+        const video = videoRef.current
+        if (!video || !aircraft.video) return
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    video.play().catch(() => {})
+                } else {
+                    video.pause()
+                }
+            },
+            { threshold: 0.3 }
+        )
+
+        observer.observe(video)
+        return () => observer.disconnect()
+    }, [aircraft.video])
+
+    return (
+        <article className="aircraftCard">
+            {aircraft.video ? (
+                <video
+                    ref={videoRef}
+                    className="card-background-video"
+                    muted
+                    playsInline
+                    loop
+                    preload="none"
+                >
+                    <source src={aircraft.video} type="video/mp4" />
+                </video>
+            ) : (
+                <div className="card-no-video" aria-hidden="true">✈</div>
+            )}
+
+            <div className="card-gradient" />
+
+            <div className="card-content">
+                <h2 className="card-name">{aircraft.name}</h2>
+                <div className="d-flex flex-wrap gap-1">
+                    <span className="card-tag">{aircraft.speed}</span>
+                    <span className="card-tag">{aircraft.range}</span>
+                    <span className="card-tag muted">{aircraft.role}</span>
+                    <span className="card-tag muted">{aircraft.note}</span>
+                </div>
             </div>
+        </article>
+    )
+}
+
+const AircraftCard = ({ scrollContainerRef, checkScrollButtons }) => {
+    return (
+        <div
+            ref={scrollContainerRef}
+            className="aircraftCards"
+            onScroll={checkScrollButtons}
+        >
+            {aircrafts.map((aircraft) => (
+                <VideoCard key={aircraft.id} aircraft={aircraft} />
+            ))}
         </div>
     )
 }

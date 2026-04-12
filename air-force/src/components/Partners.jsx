@@ -1,16 +1,12 @@
-import LogoLoop from './LogoLoop/LogoLoop';
-import partners from '../data/partners.json';
+import LogoLoop from './LogoLoop/LogoLoop'
+import partners from '../data/partners.json'
 
-const logos = partners.map(p => ({
-    src: p.src,
-    alt: p.alt,
-    width: p.width,
-}));
+const logos = partners.map(p => ({ src: p.src, alt: p.alt, width: p.width }))
 
 export const PartnerMarquee = () => {
     return (
-        <div className="partner-section">
-            <h2>Powered by Industry Leaders</h2>
+        <div className="partner-section text-center">
+            <p className="section-label mb-4">Powered by Industry Leaders</p>
             <div className="marquee-container">
                 <LogoLoop
                     logos={logos}
@@ -24,5 +20,5 @@ export const PartnerMarquee = () => {
                 />
             </div>
         </div>
-    );
-};
+    )
+}

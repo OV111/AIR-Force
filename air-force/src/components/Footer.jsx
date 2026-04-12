@@ -2,63 +2,76 @@ import { Link } from "react-router-dom"
 
 export const Footer = () => {
     return (
-        <footer className="footer">
-            <div className="footer-header">
-                <div className="footer-h1">
-                    <Link to="/"><img src="icons8-us-air-force.svg" alt="logo-air-force" width={70} height={70}/></Link>
-                    <h1>AIR FORCE</h1>
+        <footer className="border-top py-5" style={{ borderColor: 'var(--border) !important' }}>
+            <div className="container">
+
+                {/* Top row: logo + contact */}
+                <div className="row justify-content-between align-items-start pb-4 mb-4 border-bottom"
+                     style={{ borderColor: 'var(--border)' }}>
+                    <div className="col-auto">
+                        <Link to="/" className="d-flex align-items-center gap-3 text-decoration-none">
+                            <img src="/icons8-us-air-force.svg" alt="Air Force logo" width={52} height={52} />
+                            <span className="footer-brand-text">AIR FORCE</span>
+                        </Link>
+                    </div>
+                    <div className="col-auto text-end">
+                        <address style={{ fontStyle: 'normal' }}>
+                            <p className="mb-1 small" style={{ color: 'var(--text-muted)' }}>info@airforce.mil</p>
+                            <p className="mb-1 small" style={{ color: 'var(--text-muted)' }}>+1 (703) 697-5737</p>
+                            <p className="mb-0 small" style={{ color: 'var(--text-muted)' }}>Pentagon, Arlington, VA 22201</p>
+                        </address>
+                    </div>
                 </div>
 
-                <address className="footer-contact">
-                    <p>info@airforce.mail</p>
-                    <p>+12125551212</p>
-                    <p>Location, Location, LC</p>
-                </address>
+                {/* Nav columns */}
+                <div className="row row-cols-2 row-cols-md-4 g-4 mb-4">
+                    <div className="col">
+                        <p className="footer-nav-heading">Aircraft</p>
+                        <Link to="/aircraft" className="footer-link">Fighter Aircraft</Link>
+                        <Link to="/aircraft" className="footer-link">Bombers</Link>
+                        <Link to="/aircraft" className="footer-link">Transport</Link>
+                        <Link to="/aircraft" className="footer-link">Helicopters</Link>
+                    </div>
+                    <div className="col">
+                        <p className="footer-nav-heading">Technology</p>
+                        <Link to="/tech" className="footer-link">Weapons Systems</Link>
+                        <Link to="/tech" className="footer-link">Radar &amp; Sensors</Link>
+                        <Link to="/tech" className="footer-link">Communications</Link>
+                        <Link to="/tech" className="footer-link">Research &amp; Dev</Link>
+                    </div>
+                    <div className="col">
+                        <p className="footer-nav-heading">History</p>
+                        <Link to="/history" className="footer-link">Timeline</Link>
+                        <Link to="/history" className="footer-link">Major Conflicts</Link>
+                        <Link to="/history" className="footer-link">Heroes &amp; Legends</Link>
+                        <Link to="/history" className="footer-link">Museums</Link>
+                    </div>
+                    <div className="col">
+                        <p className="footer-nav-heading">About</p>
+                        <Link to="/about" className="footer-link">Our Mission</Link>
+                        <Link to="/about" className="footer-link">Leadership</Link>
+                        <Link to="/about" className="footer-link">Careers</Link>
+                        <Link to="/about" className="footer-link">Contact Us</Link>
+                    </div>
+                </div>
+
+                {/* Bottom row: copyright + legal */}
+                <div className="d-flex justify-content-between align-items-center flex-wrap gap-3 pt-3 border-top"
+                     style={{ borderColor: 'var(--border)' }}>
+                    <p className="mb-0 small" style={{ color: 'var(--text-muted)' }}>
+                        © {new Date().getFullYear()} Air Force. Official A.F. International Website.
+                    </p>
+                    <div className="d-flex gap-4 flex-wrap">
+                        {['Privacy Policy', 'Accessibility', 'FOIA', 'No FEAR Act'].map(label => (
+                            <a key={label} href={`/${label.toLowerCase().replace(/\s+/g, '-')}`}
+                               className="small text-decoration-none footer-link" style={{ marginBottom: 0 }}>
+                                {label}
+                            </a>
+                        ))}
+                    </div>
+                </div>
+
             </div>
-
-            <div className="footer-main">
-                <nav className="footer-nav">
-                    <h3>AIRCRAFT</h3>
-                    <a href="/aircraft/fighters">Fighter Aircraft</a>
-                    <a href="/aircraft/bombers">Bombers</a>
-                    <a href="/aircraft/transport">Transport</a>
-                    <a href="/aircraft/helicopters">Helicopters</a>
-                </nav>
-
-                <nav className="footer-nav">
-                    <h3>TECHNOLOGY</h3>
-                    <a href="/tech/weapons">Weapons Systems</a>
-                    <a href="/tech/radar">Radar &amp; Sensors</a>
-                    <a href="/tech/communications">Communications</a>
-                    <a href="/tech/research">Research &amp; Development</a>
-                </nav>
-
-                <nav className="footer-nav">
-                    <h3>HISTORY</h3>
-                    <a href="/history/timeline">Timeline</a>
-                    <a href="/history/wars">Major Conflicts</a>
-                    <a href="/history/heroes">Heroes &amp; Legends</a>
-                    <a href="/history/museums">Museums</a>
-                </nav>
-
-                <nav className="footer-nav">
-                    <h3>ABOUT</h3>
-                    <a href="/about/mission">Our Mission</a>
-                    <a href="/about/leadership">Leadership</a>
-                    <a href="/about/careers">Careers</a>
-                    <a href="/about/contact">Contact Us</a>
-                </nav>
-            </div>
-
-            <section className="footer-bottom">
-                <p>© {new Date().getFullYear()} Air Force. Official A.F. Interanational Website.</p>
-                <nav className="legal-nav">
-                    <a href="/privacy">Privacy Policy</a>
-                    <a href="/accessibility">Accessibility</a>
-                    <a href="/foia">FOIA</a>
-                    <a href="/no-fear">No FEAR Act</a>
-                </nav>
-            </section>
         </footer>
     )
 }
