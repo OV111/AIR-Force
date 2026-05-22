@@ -25,13 +25,14 @@ export const Header = () => {
 
                         <BlurText
                             text="WELCOME TO AIR FORCE"
+                            as="h1"
                             delay={150}
                             animateBy="words"
                             direction="top"
                             className="header-title mb-3"
                         />
 
-                        <p className="lead mb-4" style={{ color: 'rgba(255,255,255,0.78)', maxWidth: 620, margin: '0 auto 1.5rem' }}>
+                        <p className="lead mb-4" style={{ color: 'rgba(255,255,255,0.78)', maxWidth: 620, margin: '0 auto' }}>
                             Commanding the skies with next-generation aircraft, cutting-edge systems,
                             and elite pilots. Unmatched precision. Relentless innovation.
                             Air superiority is not a strategy — it is a reality.

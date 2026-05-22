@@ -85,7 +85,18 @@
   image-rendering: -webkit-optimize-contrast;
   -webkit-user-drag: none;
   pointer-events: none;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: brightness(0) invert(1);
+  opacity: 0.55;
+  transition: opacity 0.3s ease, filter 0.3s ease, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logoloop__track:hover .logoloop__item img {
+  opacity: 0.35;
+}
+
+.logoloop__item:hover img {
+  opacity: 1 !important;
+  filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(91, 108, 242, 0.8)) !important;
 }
 
 .logoloop--scale-hover .logoloop__item {

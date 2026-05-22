@@ -16,6 +16,7 @@ const buildKeyframes = (from, steps) => {
 
 const BlurText = ({
   text = '',
+  as: Tag = 'p',
   delay = 200,
   className = '',
   animateBy = 'words',
@@ -78,7 +79,7 @@ const BlurText = ({
   );
 
   return (
-    <p
+    <Tag
       ref={ref}
       className={`blur-text ${className} flex flex-wrap`}
     >
@@ -108,7 +109,7 @@ const BlurText = ({
           </motion.span>
         );
       })}
-    </p>
+    </Tag>
   );
 };
 

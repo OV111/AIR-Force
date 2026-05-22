@@ -12,10 +12,11 @@ export const PartnerMarquee = () => {
                     logos={logos}
                     speed={80}
                     direction="left"
-                    logoHeight={44}
-                    gap={80}
-                    hoverSpeed={0}
-                    scaleOnHover
+                    logoHeight={32}
+                    gap={48}
+                    pauseOnHover
+                    fadeOut
+                    fadeOutColor="#111132"
                     ariaLabel="Industry partners"
                 />
             </div>
